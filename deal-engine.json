@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "mode": "verified-savings-ranking",
+  "description": "Ranks savings paths using indexed coupon/reward value and store relevance. Final retail price is shown only after a verified price source is connected.",
+  "ranking": {
+    "couponValueWeight": 10,
+    "storeMatchBonus": 4,
+    "brandExactBonus": 8,
+    "productTokenBonus": 2,
+    "verifiedPriceRequiredForFinalPrice": true
+  }
+}

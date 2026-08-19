@@ -1,18 +1,14 @@
-# Coupon Command Center
+# Coupon Command Center — Step 5
 
-Mobile-first MVP for aggregating legitimate coupon offers into one searchable command center.
+Adds the Best Deal Engine on top of Step 4.
 
-## V1 features
-- Search
-- Coupon type filters
-- Best deals dashboard
-- Local coupon wallet
-- Expiring-soon view
-- Mobile-first responsive UI
-- Demo coupon dataset
+## New
+- Best Savings Path banner
+- Savings-value ranking
+- Store relevance ranking
+- Match-confidence labels
+- Indexed basket savings total
+- Pricing-ready data model in `deal-engine.json`
 
-## Redemption safety
-The app does not generate or alter coupon barcodes. Production integrations should preserve the issuer's authorized print, loyalty, digital, or rebate redemption flow.
-
-## Deploy
-Import this repository into Vercel as a static site. `index.html` is the entry point.
+## Important
+The app does not invent retailer shelf prices. Final price and true basket total are reserved for verified retailer pricing integrations.
