@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "brand": "Tide",
+    "title": "Tide Detergent",
+    "desc": "Check current manufacturer savings and eligible digital offers.",
+    "save": "CHECK OFFERS",
+    "source": "Manufacturer Direct",
+    "type": "Digital",
+    "store": "Participating stores",
+    "exp": "Live source",
+    "url": "https://www.pggoodeveryday.com/",
+    "hot": true
+  },
+  {
+    "id": 2,
+    "brand": "Printable Grocery Coupons",
+    "title": "Coupons.com Printable Offers",
+    "desc": "Browse current print-at-home grocery coupons and complete phone verification at Coupons.com.",
+    "save": "BROWSE",
+    "source": "Coupons.com",
+    "type": "Printable",
+    "store": "Most major grocers",
+    "exp": "Live source",
+    "url": "https://www.coupons.com/printable"
+  },
+  {
+    "id": 3,
+    "brand": "Grocery Matchups",
+    "title": "GrocerySmarts Weekly Matchups",
+    "desc": "Find weekly store sales paired with active manufacturer coupons.",
+    "save": "MATCH",
+    "source": "GrocerySmarts",
+    "type": "Store",
+    "store": "80+ stores listed",
+    "exp": "Weekly",
+    "url": "https://www.grocerysmarts.com/",
+    "hot": true
+  },
+  {
+    "id": 4,
+    "brand": "Coupon Search",
+    "title": "LOZO Coupon Finder",
+    "desc": "Search for grocery coupons across coupon and manufacturer sources.",
+    "save": "SEARCH",
+    "source": "LOZO",
+    "type": "Printable",
+    "store": "Multiple retailers",
+    "exp": "Live source",
+    "url": "https://lozo.com/"
+  },
+  {
+    "id": 5,
+    "brand": "Deal Finder",
+    "title": "Krazy Coupon Lady Deals",
+    "desc": "Browse current retailer deals, coupon matchups and savings strategies.",
+    "save": "DEALS",
+    "source": "KCL",
+    "type": "Store",
+    "store": "Major retailers",
+    "exp": "Live source",
+    "url": "https://thekrazycouponlady.com/"
+  },
+  {
+    "id": 6,
+    "brand": "Fetch Rewards",
+    "title": "Fetch Personalized Offers",
+    "desc": "Open Fetch to view offers personalized to your account and earn points after qualifying purchases.",
+    "save": "EARN",
+    "source": "Fetch",
+    "type": "Rewards",
+    "store": "Varies by offer",
+    "exp": "Personalized",
+    "url": "https://fetch.com/",
+    "hot": true
+  }
+]

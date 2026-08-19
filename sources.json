@@ -1,0 +1,50 @@
+[
+  {
+    "id": "couponscom",
+    "name": "Coupons.com",
+    "kind": "Printable + Mobile",
+    "status": "Link-out",
+    "note": "Printable and mobile in-store offers; redemption stays with Coupons.com.",
+    "url": "https://www.coupons.com/printable"
+  },
+  {
+    "id": "grocerysmarts",
+    "name": "GrocerySmarts",
+    "kind": "Sale Matchups",
+    "status": "Public directory",
+    "note": "Weekly sale matchups and links to manufacturer coupons.",
+    "url": "https://www.grocerysmarts.com/"
+  },
+  {
+    "id": "lozo",
+    "name": "LOZO",
+    "kind": "Coupon Finder",
+    "status": "Link-out",
+    "note": "Coupon discovery source; users complete redemption at the originating source.",
+    "url": "https://lozo.com/"
+  },
+  {
+    "id": "kcl",
+    "name": "The Krazy Coupon Lady",
+    "kind": "Deals + Store Offers",
+    "status": "Link-out",
+    "note": "Deal discovery and retailer-specific savings content.",
+    "url": "https://thekrazycouponlady.com/"
+  },
+  {
+    "id": "manufacturers",
+    "name": "Manufacturer Direct",
+    "kind": "Brand Programs",
+    "status": "Direct",
+    "note": "Official brand/manufacturer coupon and loyalty programs.",
+    "url": "https://www.pggoodeveryday.com/"
+  },
+  {
+    "id": "fetch",
+    "name": "Fetch",
+    "kind": "Rewards + Cashback",
+    "status": "Personalized",
+    "note": "Offers are personalized by Fetch; open Fetch to see the offers available to your account.",
+    "url": "https://fetch.com/"
+  }
+]
