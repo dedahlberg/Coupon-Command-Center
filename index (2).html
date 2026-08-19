@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101828">
+<title>Coupon Command Center</title>
+<style>
+:root{--ink:#101828;--muted:#667085;--line:#e4e7ec;--bg:#f6f8fb;--card:#fff;--accent:#635bff;--green:#067647;--greenbg:#ecfdf3;--orange:#b54708;--orangebg:#fffaeb;--shadow:0 10px 30px rgba(16,24,40,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,textarea{font:inherit}
+.shell{max-width:1180px;margin:auto;min-height:100vh;padding:24px 20px 92px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}.brand{display:flex;gap:12px;align-items:center}.logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#635bff,#9b8cff);display:grid;place-items:center;color:#fff;font-weight:900;font-size:20px;box-shadow:var(--shadow)}.brand h1{font-size:22px;line-height:1.1;margin:0}.brand p{margin:4px 0 0;color:var(--muted);font-size:13px}.pill{border:1px solid var(--line);background:white;border-radius:999px;padding:10px 14px;color:var(--ink);font-weight:700}
+.hero{background:linear-gradient(135deg,#151a2d 0%,#253054 55%,#584bc4 100%);border-radius:30px;padding:28px;color:#fff;box-shadow:var(--shadow)}.hero h2{font-size:34px;line-height:1.05;margin:0 0 10px}.hero p{color:#d9dcf7;margin:0 0 18px;max-width:800px}.search{display:flex;background:white;border-radius:17px;padding:6px;gap:6px;max-width:760px}.search input{flex:1;min-width:0;border:0;outline:0;padding:14px;font-size:16px;background:transparent}.search button{border:0;border-radius:12px;background:var(--accent);color:white;font-weight:800;padding:0 18px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0 26px}.stat{background:white;border:1px solid var(--line);border-radius:18px;padding:18px}.stat strong{display:block;font-size:26px}.stat span{color:var(--muted);font-size:13px}
+.section{background:white;border:1px solid var(--line);border-radius:22px;padding:18px;margin:16px 0}.section h3{margin:0 0 5px;font-size:19px}.section p{margin:0 0 14px;color:var(--muted);font-size:13px;line-height:1.45}
+.setup-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:16px}.field label{display:block;font-size:12px;font-weight:800;color:#475467;margin-bottom:7px}.field input,.field textarea{width:100%;border:1px solid #d0d5dd;border-radius:12px;padding:12px;background:white;outline:0}.field input:focus,.field textarea:focus{border-color:#8d86ff;box-shadow:0 0 0 3px rgba(99,91,255,.12)}
+.store-list{display:flex;flex-wrap:wrap;gap:8px}.store{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 12px;font-weight:750;color:#344054;cursor:pointer}.store.on{background:#101828;color:#fff;border-color:#101828}
+.primary{border:0;background:var(--accent);color:#fff;border-radius:12px;padding:12px 16px;font-weight:850;cursor:pointer}.secondary{border:1px solid var(--line);background:white;color:#344054;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer}
+.actions-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.match-head{display:flex;justify-content:space-between;gap:12px;align-items:end;margin:26px 0 12px}.match-head h3{margin:0}.match-head p{margin:4px 0 0;color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:white;border:1px solid var(--line);border-radius:20px;padding:17px;display:flex;flex-direction:column;gap:12px}.card h4{margin:0;font-size:16px}.muted{color:var(--muted);font-size:13px;line-height:1.4}.value{font-size:24px;font-weight:950;color:var(--green)}.tags{display:flex;gap:6px;flex-wrap:wrap}.tag{font-size:11px;border-radius:999px;padding:6px 8px;background:#f2f4f7;color:#475467;font-weight:750}.tag.good{background:var(--greenbg);color:var(--green)}.tag.warn{background:var(--orangebg);color:var(--orange)}
+.card-actions{display:flex;gap:8px;margin-top:auto}.card-actions a,.card-actions button{flex:1;text-decoration:none;text-align:center;border-radius:11px;padding:10px;font-size:13px;font-weight:850}.open{background:#101828;color:white}.save{background:#f4f3ff;color:#463cc7;border:1px solid #d7d2ff}
+.result-summary{background:#f8f9fc;border:1px solid var(--line);border-radius:14px;padding:13px 15px;margin:14px 0 0;color:#475467;font-size:13px}.empty{grid-column:1/-1;background:white;border:1px dashed #cfd4dc;border-radius:18px;padding:28px;text-align:center;color:var(--muted)}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.93);backdrop-filter:blur(18px);border-top:1px solid var(--line);padding:10px 16px;z-index:10}.nav{max-width:650px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr)}.nav button{border:0;background:transparent;padding:8px;color:#667085;font-size:11px;font-weight:750}.nav button b{display:block;font-size:20px}.nav .active{color:var(--accent)}
+.toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);background:#101828;color:white;padding:12px 16px;border-radius:999px;font-weight:800;font-size:13px;opacity:0;transition:.2s;z-index:20}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.setup-grid{grid-template-columns:1fr}}@media(max-width:560px){.shell{padding:16px 14px 90px}.hero{padding:22px 18px;border-radius:24px}.hero h2{font-size:28px}.grid{grid-template-columns:1fr}.topbar .pill{display:none}}
+</style>
+</head>
+<body>
+<main class="shell">
+<div class="topbar"><div class="brand"><div class="logo">CC</div><div><h1>Coupon Command Center</h1><p>Personal savings engine</p></div></div><button class="pill" id="walletTop">💳 Wallet <span id="walletCount">0</span></button></div>
+
+<section class="hero">
+<h2>Tell us what you buy. We’ll find the savings paths.</h2>
+<p>Step 4 adds ZIP code, preferred stores and shopping-list matching on top of the live offer index.</p>
+<div class="search"><input id="quickSearch" placeholder="Quick search: Tide, pizza, allergy..."><button id="quickBtn">Search</button></div>
+</section>
+
+<section class="stats">
+<div class="stat"><strong id="offerCount">0</strong><span>Indexed offers</span></div>
+<div class="stat"><strong id="storeCount">0</strong><span>Preferred stores</span></div>
+<div class="stat"><strong id="listCount">0</strong><span>Shopping list items</span></div>
+<div class="stat"><strong id="walletCount2">0</strong><span>Saved offers</span></div>
+</section>
+
+<section class="section">
+<h3>1. Set your shopping area</h3>
+<p>Your ZIP code and store choices are saved only in your browser in this prototype.</p>
+<div class="setup-grid">
+<div class="field"><label>ZIP CODE</label><input id="zip" inputmode="numeric" maxlength="10" placeholder="75034"></div>
+<div class="field"><label>PREFERRED STORES</label><div class="store-list" id="storeList"></div></div>
+</div>
+<div class="actions-row"><button class="primary" id="savePrefs">Save preferences</button><button class="secondary" id="clearPrefs">Clear</button></div>
+</section>
+
+<section class="section">
+<h3>2. Build your shopping list</h3>
+<p>Enter one item per line or separate items with commas. Brand names work best.</p>
+<div class="field"><label>SHOPPING LIST</label><textarea id="shoppingList" rows="5" placeholder="Tide&#10;Red Baron pizza&#10;Dove body wash&#10;Bibigo dumplings"></textarea></div>
+<div class="actions-row"><button class="primary" id="matchBtn">Find my savings</button><button class="secondary" id="sampleBtn">Load sample list</button></div>
+<div class="result-summary" id="summary">No shopping list matched yet.</div>
+</section>
+
+<div class="match-head"><div><h3>Best matches</h3><p>Matching is based on brand/product text and your preferred stores. Redemption remains with the source.</p></div></div>
+<section class="grid" id="results"></section>
+</main>
+
+<div class="bottom"><div class="nav"><button class="active"><b>⌂</b>Discover</button><button><b>⌕</b>Search</button><button id="walletNav"><b>▣</b>Wallet</button><button><b>☷</b>List</button></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+let OFFERS=[],STORES=[],wallet=JSON.parse(localStorage.getItem("ccc-wallet-v4")||"[]");
+let prefs=JSON.parse(localStorage.getItem("ccc-prefs-v4")||'{"zip":"","stores":[]}');
+const results=document.getElementById("results"),toast=document.getElementById("toast");
+
+function norm(s){return (s||"").toLowerCase().replace(/[^a-z0-9\s]/g," ").replace(/\s+/g," ").trim()}
+function tokens(s){return norm(s).split(" ").filter(x=>x.length>2)}
+function say(m){toast.textContent=m;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),1500)}
+
+async function load(){
+  STORES=await (await fetch("./stores.json",{cache:"no-store"})).json();
+  let live={offers:[]}; try{live=await (await fetch("./live-offers.json?t="+Date.now(),{cache:"no-store"})).json()}catch(e){}
+  let fallback=[]; try{fallback=await (await fetch("./offers.json",{cache:"no-store"})).json()}catch(e){}
+  OFFERS=(live.offers&&live.offers.length?live.offers:fallback).map((o,i)=>({
+    id:o.id||("offer-"+i), brand:o.brand||"", title:o.title||"", desc:o.terms||o.desc||"",
+    value:o.value||o.save||"VIEW", source:o.source||"Source", type:o.type||"Offer",
+    store:o.store||"Any / see source", expires:o.expires||o.exp||"See source", url:o.url||"#"
+  }));
+  renderStores();applyPrefs();renderStats();renderOffers(OFFERS.slice(0,9),[]);
+}
+function renderStores(){
+  document.getElementById("storeList").innerHTML=STORES.map(s=>`<button class="store" data-id="${s.id}">${s.name}</button>`).join("");
+  document.querySelectorAll(".store").forEach(b=>b.onclick=()=>{b.classList.toggle("on");renderStats()});
+}
+function applyPrefs(){
+  document.getElementById("zip").value=prefs.zip||"";
+  document.querySelectorAll(".store").forEach(b=>b.classList.toggle("on",(prefs.stores||[]).includes(b.dataset.id)));
+}
+function selectedStores(){return [...document.querySelectorAll(".store.on")].map(x=>x.dataset.id)}
+function parseList(){
+  const raw=document.getElementById("shoppingList").value;
+  return raw.split(/[\n,]+/).map(x=>x.trim()).filter(Boolean);
+}
+function storeBoost(o){
+  const selected=selectedStores(); if(!selected.length) return 0;
+  const t=norm(`${o.store} ${o.source}`);
+  let b=0;
+  for(const id of selected){
+    const s=STORES.find(x=>x.id===id); if(s&&tokens(s.name).some(tok=>t.includes(tok))) b+=2;
+    if(id==="other" && /any|most|participating|see source/.test(t)) b+=1;
+  }
+  return b;
+}
+function scoreOffer(o,item){
+  const ot=norm(`${o.brand} ${o.title} ${o.desc}`), it=tokens(item);
+  let score=0;
+  for(const tok of it){if(ot.includes(tok)) score+=tok.length>=6?4:2}
+  if(norm(o.brand) && norm(item).includes(norm(o.brand))) score+=6;
+  return score+storeBoost(o);
+}
+function matchList(){
+  const list=parseList(); renderStats();
+  if(!list.length){document.getElementById("summary").textContent="Enter at least one shopping-list item.";renderOffers([],[]);return}
+  const matches=[];
+  for(const item of list){
+    const ranked=OFFERS.map(o=>({o,score:scoreOffer(o,item)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score).slice(0,3);
+    for(const r of ranked) matches.push({...r.o,matchedItem:item,matchScore:r.score});
+  }
+  // de-dupe, keep best score
+  const map=new Map();
+  matches.forEach(m=>{const old=map.get(m.id);if(!old||m.matchScore>old.matchScore)map.set(m.id,m)});
+  const uniq=[...map.values()].sort((a,b)=>b.matchScore-a.matchScore);
+  const covered=new Set(uniq.map(x=>x.matchedItem));
+  document.getElementById("summary").textContent=`Matched ${covered.size} of ${list.length} shopping-list items to ${uniq.length} offer path${uniq.length===1?"":"s"}.`;
+  renderOffers(uniq,list);
+}
+function renderOffers(arr,list){
+  if(!arr.length){results.innerHTML='<div class="empty">No matching offers yet. Try a brand name or broader product term.</div>';return}
+  results.innerHTML=arr.map(o=>`
+  <article class="card">
+    <div><span class="tag good">${o.source}</span> ${o.matchedItem?`<span class="tag">Matched: ${o.matchedItem}</span>`:""}</div>
+    <div class="value">${o.value}</div>
+    <div><h4>${o.title}</h4><div class="muted">${o.desc||"Open source for current details."}</div></div>
+    <div class="tags"><span class="tag">${o.type}</span><span class="tag">${o.store}</span><span class="tag warn">${o.expires}</span></div>
+    <div class="card-actions"><button class="save" onclick="toggleWallet('${o.id.replace(/'/g,"")}')">${wallet.includes(o.id)?"✓ Saved":"+ Wallet"}</button><a class="open" href="${o.url}" target="_blank" rel="noopener">Open source ↗</a></div>
+  </article>`).join("");
+}
+window.toggleWallet=id=>{wallet=wallet.includes(id)?wallet.filter(x=>x!==id):[...wallet,id];localStorage.setItem("ccc-wallet-v4",JSON.stringify(wallet));renderStats();say(wallet.includes(id)?"Saved to wallet":"Removed")};
+function renderStats(){document.getElementById("offerCount").textContent=OFFERS.length;document.getElementById("storeCount").textContent=selectedStores().length;document.getElementById("listCount").textContent=parseList().length;document.getElementById("walletCount").textContent=wallet.length;document.getElementById("walletCount2").textContent=wallet.length}
+document.getElementById("savePrefs").onclick=()=>{prefs={zip:document.getElementById("zip").value.trim(),stores:selectedStores()};localStorage.setItem("ccc-prefs-v4",JSON.stringify(prefs));say("Preferences saved")};
+document.getElementById("clearPrefs").onclick=()=>{prefs={zip:"",stores:[]};localStorage.removeItem("ccc-prefs-v4");applyPrefs();renderStats();say("Preferences cleared")};
+document.getElementById("sampleBtn").onclick=()=>{document.getElementById("shoppingList").value="Tide\nRed Baron pizza\nDove body wash\nBibigo dumplings";renderStats()};
+document.getElementById("matchBtn").onclick=matchList;
+document.getElementById("shoppingList").addEventListener("input",renderStats);
+document.getElementById("quickBtn").onclick=()=>{const q=document.getElementById("quickSearch").value.trim();document.getElementById("shoppingList").value=q;matchList();window.scrollTo({top:700,behavior:"smooth"})};
+document.getElementById("quickSearch").addEventListener("keydown",e=>{if(e.key==="Enter")document.getElementById("quickBtn").click()});
+document.getElementById("walletTop").onclick=document.getElementById("walletNav").onclick=()=>{const saved=OFFERS.filter(o=>wallet.includes(o.id));document.getElementById("summary").textContent=`Wallet: ${saved.length} saved offer${saved.length===1?"":"s"}.`;renderOffers(saved,[]);window.scrollTo({top:800,behavior:"smooth"})};
+load();
+</script>
+</body>
+</html>
