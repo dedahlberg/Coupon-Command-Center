@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "retailers": {
+    "walmart": {
+      "status": "adapter-ready",
+      "officialApi": "Walmart Marketplace API",
+      "localShelfPriceVerified": false,
+      "notes": "Official Marketplace APIs require seller/business credentials. Local store shelf price is not claimed by this app without a verified store-specific source.",
+      "searchUrl": "https://www.walmart.com/search?q={query}"
+    }
+  }
+}

@@ -31,7 +31,7 @@
 
 <section class="hero">
 <h2>Tell us what you buy. We’ll find the savings paths.</h2>
-<p>Step 5 ranks the strongest savings path across your live coupon and rewards index. Final shelf price appears only when verified retailer pricing is connected.</p>
+<p>Step 6 adds the Walmart pricing adapter. If official Walmart Marketplace credentials are configured, the app can query Walmart catalog data; local shelf price is still labeled unverified unless a store-specific source supports it.</p>
 <div class="search"><input id="quickSearch" placeholder="Quick search: Tide, pizza, allergy..."><button id="quickBtn">Search</button></div>
 </section>
 
@@ -50,6 +50,17 @@
 <div class="field"><label>PREFERRED STORES</label><div class="store-list" id="storeList"></div></div>
 </div>
 <div class="actions-row"><button class="primary" id="savePrefs">Save preferences</button><button class="secondary" id="clearPrefs">Clear</button></div>
+</section>
+
+
+<section class="section">
+<h3>Walmart Price Check</h3>
+<p>Search Walmart from the Command Center. If official Walmart Marketplace API credentials are configured in Vercel, this checks the authenticated catalog. Otherwise it opens the Walmart search result for manual verification.</p>
+<div class="setup-grid">
+  <div class="field"><label>PRODUCT OR UPC</label><input id="wmQuery" placeholder="Tide Pods or 012345678905"></div>
+  <div class="field"><label>VERIFIED RESULT</label><div id="wmResult" class="result-summary" style="margin:0">No Walmart price check yet.</div></div>
+</div>
+<div class="actions-row"><button class="primary" id="wmCheck">Check Walmart</button></div>
 </section>
 
 <section class="section">
@@ -181,6 +192,36 @@ document.getElementById("shoppingList").addEventListener("input",renderStats);
 document.getElementById("quickBtn").onclick=()=>{const q=document.getElementById("quickSearch").value.trim();document.getElementById("shoppingList").value=q;matchList();window.scrollTo({top:700,behavior:"smooth"})};
 document.getElementById("quickSearch").addEventListener("keydown",e=>{if(e.key==="Enter")document.getElementById("quickBtn").click()});
 document.getElementById("walletTop").onclick=document.getElementById("walletNav").onclick=()=>{const saved=OFFERS.filter(o=>wallet.includes(o.id));document.getElementById("summary").textContent=`Wallet: ${saved.length} saved offer${saved.length===1?"":"s"}.`;renderOffers(saved,[]);window.scrollTo({top:800,behavior:"smooth"})};
+
+async function checkWalmart(){
+  const val=document.getElementById("wmQuery").value.trim();
+  const box=document.getElementById("wmResult");
+  if(!val){box.textContent="Enter a product name or UPC.";return}
+  box.textContent="Checking Walmart…";
+  const isUpc=/^\d{10,14}$/.test(val);
+  try{
+    const r=await fetch(`/api/walmart-price?${isUpc?"upc":"q"}=${encodeURIComponent(val)}`,{cache:"no-store"});
+    const j=await r.json();
+    if(!j.configured){
+      box.innerHTML=`Official API credentials are not configured yet. <a href="${j.walmartUrl}" target="_blank" rel="noopener">Verify on Walmart ↗</a>`;
+      return;
+    }
+    if(!j.ok){
+      box.textContent="Walmart API check failed. Use the Walmart site to verify.";
+      return;
+    }
+    const d=j.data||{};
+    const raw=JSON.stringify(d);
+    const priceMatch=raw.match(/"(?:price|currentPrice|amount)"\s*:\s*(?:"?\$?)(\d+(?:\.\d{1,2})?)/i);
+    box.innerHTML=priceMatch
+      ? `Catalog price field found: <strong>$${Number(priceMatch[1]).toFixed(2)}</strong><br><small>Authenticated Marketplace data; verify local-store applicability.</small>`
+      : `Walmart catalog responded successfully, but no usable price field was found. <a href="https://www.walmart.com/search?q=${encodeURIComponent(val)}" target="_blank" rel="noopener">Verify on Walmart ↗</a>`;
+  }catch(e){
+    box.innerHTML=`Could not complete the API check. <a href="https://www.walmart.com/search?q=${encodeURIComponent(val)}" target="_blank" rel="noopener">Verify on Walmart ↗</a>`;
+  }
+}
+document.getElementById("wmCheck").onclick=checkWalmart;
+
 load();
 </script>
 </body>
