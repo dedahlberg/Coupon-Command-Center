@@ -1,4 +1,5 @@
 name: Refresh coupon offers
+
 on:
   schedule:
     - cron: "17 11 * * *"
@@ -8,24 +9,43 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: refresh-coupon-offers
+  cancel-in-progress: false
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Check out repository
+        uses: actions/checkout@v4
         with:
-          node-version: "20"
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
       - name: Refresh broader public savings index
         run: node scripts/refresh-offers.cjs
-      - name: Commit changed offer data
+
+      - name: Commit refreshed offer data
         run: |
           if git diff --quiet -- live-offers.json; then
             echo "No offer changes."
             exit 0
           fi
+
           git config user.name "coupon-command-bot"
           git config user.email "actions@users.noreply.github.com"
+
           git add live-offers.json
           git commit -m "Refresh broader live savings index"
-          git push
+
+          # Rebase onto the latest main in case another commit landed
+          # while this workflow was running.
+          git pull --rebase origin main
+
+          git push origin HEAD:main
