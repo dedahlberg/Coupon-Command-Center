@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-19T01:54:06.402497+00:00",
+  "sources": {
+    "GrocerySmarts": {
+      "type": "public-directory",
+      "priority": 90,
+      "supportsIndividualOffers": true
+    },
+    "LOZO": {
+      "type": "public-directory",
+      "priority": 80,
+      "supportsIndividualOffers": false
+    },
+    "Coupons.com": {
+      "type": "provider-linkout",
+      "priority": 85,
+      "supportsIndividualOffers": false
+    },
+    "Manufacturer Direct": {
+      "type": "brand-program",
+      "priority": 95,
+      "supportsIndividualOffers": true
+    },
+    "Fetch": {
+      "type": "personalized-rewards",
+      "priority": 70,
+      "supportsIndividualOffers": false
+    },
+    "KCL": {
+      "type": "deal-discovery",
+      "priority": 65,
+      "supportsIndividualOffers": false
+    }
+  }
+}
