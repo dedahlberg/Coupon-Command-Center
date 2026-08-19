@@ -1,0 +1,34 @@
+[
+  {
+    "id": "walmart",
+    "name": "Walmart"
+  },
+  {
+    "id": "target",
+    "name": "Target"
+  },
+  {
+    "id": "kroger",
+    "name": "Kroger"
+  },
+  {
+    "id": "tomthumb",
+    "name": "Tom Thumb / Albertsons"
+  },
+  {
+    "id": "cvs",
+    "name": "CVS"
+  },
+  {
+    "id": "walgreens",
+    "name": "Walgreens"
+  },
+  {
+    "id": "heb",
+    "name": "H-E-B"
+  },
+  {
+    "id": "other",
+    "name": "Other / Any Store"
+  }
+]
