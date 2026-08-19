@@ -10,7 +10,7 @@
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,textarea{font:inherit}
 .shell{max-width:1180px;margin:auto;min-height:100vh;padding:24px 20px 92px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}.brand{display:flex;gap:12px;align-items:center}.logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#635bff,#9b8cff);display:grid;place-items:center;color:#fff;font-weight:900;font-size:20px;box-shadow:var(--shadow)}.brand h1{font-size:22px;line-height:1.1;margin:0}.brand p{margin:4px 0 0;color:var(--muted);font-size:13px}.pill{border:1px solid var(--line);background:white;border-radius:999px;padding:10px 14px;color:var(--ink);font-weight:700}
 .hero{background:linear-gradient(135deg,#151a2d 0%,#253054 55%,#584bc4 100%);border-radius:30px;padding:28px;color:#fff;box-shadow:var(--shadow)}.hero h2{font-size:34px;line-height:1.05;margin:0 0 10px}.hero p{color:#d9dcf7;margin:0 0 18px;max-width:800px}.search{display:flex;background:white;border-radius:17px;padding:6px;gap:6px;max-width:760px}.search input{flex:1;min-width:0;border:0;outline:0;padding:14px;font-size:16px;background:transparent}.search button{border:0;border-radius:12px;background:var(--accent);color:white;font-weight:800;padding:0 18px}
-.dashboard-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:16px;margin:18px 0}.quick-panel,.insight-panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px}.quick-panel h3,.insight-panel h3{margin:0 0 6px}.quick-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.quick-action{border:1px solid var(--line);background:#fff;border-radius:14px;padding:14px;text-align:left;cursor:pointer}.quick-action b{display:block;font-size:14px;margin-bottom:4px}.quick-action span{font-size:12px;color:var(--muted)}.insight-list{display:grid;gap:10px;margin-top:12px}.insight{border:1px solid var(--line);border-radius:14px;padding:12px}.insight strong{display:block;font-size:14px}.insight span{font-size:12px;color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0 26px}.stat{background:white;border:1px solid var(--line);border-radius:18px;padding:18px}.stat strong{display:block;font-size:26px}.stat span{color:var(--muted);font-size:13px}
+.dashboard-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:16px;margin:18px 0}.quick-panel,.insight-panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px}.quick-panel h3,.insight-panel h3{margin:0 0 6px}.quick-actions{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.quick-action{border:1px solid var(--line);background:#fff;border-radius:14px;padding:14px;text-align:left;cursor:pointer}.quick-action b{display:block;font-size:14px;margin-bottom:4px}.quick-action span{font-size:12px;color:var(--muted)}.insight-list{display:grid;gap:10px;margin-top:12px}.insight{border:1px solid var(--line);border-radius:14px;padding:12px}.insight strong{display:block;font-size:14px}.insight span{font-size:12px;color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0 26px}.stat{background:white;border:1px solid var(--line);border-radius:18px;padding:18px}.stat strong{display:block;font-size:26px}.stat span{color:var(--muted);font-size:13px}
 .section{background:white;border:1px solid var(--line);border-radius:22px;padding:18px;margin:16px 0}.section h3{margin:0 0 5px;font-size:19px}.section p{margin:0 0 14px;color:var(--muted);font-size:13px;line-height:1.45}
 .setup-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:16px}.field label{display:block;font-size:12px;font-weight:800;color:#475467;margin-bottom:7px}.field input,.field textarea{width:100%;border:1px solid #d0d5dd;border-radius:12px;padding:12px;background:white;outline:0}.field input:focus,.field textarea:focus{border-color:#8d86ff;box-shadow:0 0 0 3px rgba(99,91,255,.12)}
 .source-filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.source-filter{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 11px;font-size:12px;font-weight:800;color:#475467;cursor:pointer}.source-filter.on{background:#101828;color:#fff;border-color:#101828}.source-filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.store-list{display:flex;flex-wrap:wrap;gap:8px}.store{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 12px;font-weight:750;color:#344054;cursor:pointer}.store.on{background:#101828;color:#fff;border-color:#101828}
@@ -19,10 +19,10 @@
 .match-head{display:flex;justify-content:space-between;gap:12px;align-items:end;margin:26px 0 12px}.match-head h3{margin:0}.match-head p{margin:4px 0 0;color:var(--muted);font-size:13px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:white;border:1px solid var(--line);border-radius:20px;padding:17px;display:flex;flex-direction:column;gap:12px}.card h4{margin:0;font-size:16px}.muted{color:var(--muted);font-size:13px;line-height:1.4}.value{font-size:24px;font-weight:950;color:var(--green)}.tags{display:flex;gap:6px;flex-wrap:wrap}.tag{font-size:11px;border-radius:999px;padding:6px 8px;background:#f2f4f7;color:#475467;font-weight:750}.tag.good{background:var(--greenbg);color:var(--green)}.tag.warn{background:var(--orangebg);color:var(--orange)}
 .card-actions{display:flex;gap:8px;margin-top:auto}.card-actions a,.card-actions button{flex:1;text-decoration:none;text-align:center;border-radius:11px;padding:10px;font-size:13px;font-weight:850}.open{background:#101828;color:white}.save{background:#f4f3ff;color:#463cc7;border:1px solid #d7d2ff}
-.best-banner{background:linear-gradient(135deg,#ecfdf3,#f8fffb);border:1px solid #abefc6;border-radius:16px;padding:14px 16px;margin:14px 0}.best-banner strong{display:block;font-size:16px}.best-banner span{color:#067647;font-size:13px}.score{font-size:11px;font-weight:800;border-radius:999px;padding:6px 8px;background:#eef4ff;color:#3538cd}.result-summary{background:#f8f9fc;border:1px solid var(--line);border-radius:14px;padding:13px 15px;margin:14px 0 0;color:#475467;font-size:13px}.empty{grid-column:1/-1;background:white;border:1px dashed #cfd4dc;border-radius:18px;padding:28px;text-align:center;color:var(--muted)}
+.trip-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.trip-store{border:1px solid var(--line);border-radius:16px;padding:14px;background:#fff}.trip-store h4{margin:0 0 8px}.trip-item{display:flex;justify-content:space-between;gap:12px;border-top:1px solid #eef0f3;padding:10px 0;font-size:13px}.trip-item:first-of-type{border-top:0}.trip-item small{display:block;color:var(--muted);margin-top:3px}.checkline{display:flex;gap:9px;align-items:flex-start}.checkline input{margin-top:3px}.best-banner{background:linear-gradient(135deg,#ecfdf3,#f8fffb);border:1px solid #abefc6;border-radius:16px;padding:14px 16px;margin:14px 0}.best-banner strong{display:block;font-size:16px}.best-banner span{color:#067647;font-size:13px}.score{font-size:11px;font-weight:800;border-radius:999px;padding:6px 8px;background:#eef4ff;color:#3538cd}.result-summary{background:#f8f9fc;border:1px solid var(--line);border-radius:14px;padding:13px 15px;margin:14px 0 0;color:#475467;font-size:13px}.empty{grid-column:1/-1;background:white;border:1px dashed #cfd4dc;border-radius:18px;padding:28px;text-align:center;color:var(--muted)}
 .bottom{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.93);backdrop-filter:blur(18px);border-top:1px solid var(--line);padding:10px 16px;z-index:10}.nav{max-width:650px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr)}.nav button{border:0;background:transparent;padding:8px;color:#667085;font-size:11px;font-weight:750}.nav button b{display:block;font-size:20px}.nav .active{color:var(--accent)}
 .toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);background:#101828;color:white;padding:12px 16px;border-radius:999px;font-weight:800;font-size:13px;opacity:0;transition:.2s;z-index:20}.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:850px){.dashboard-grid{grid-template-columns:1fr}.quick-actions{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.setup-grid{grid-template-columns:1fr}}@media(max-width:560px){.shell{padding:16px 14px 90px}.hero{padding:22px 18px;border-radius:24px}.hero h2{font-size:28px}.grid{grid-template-columns:1fr}.topbar .pill{display:none}}
+@media(max-width:850px){.trip-grid{grid-template-columns:1fr}.dashboard-grid{grid-template-columns:1fr}.quick-actions{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.setup-grid{grid-template-columns:1fr}}@media(max-width:560px){.shell{padding:16px 14px 90px}.hero{padding:22px 18px;border-radius:24px}.hero h2{font-size:28px}.grid{grid-template-columns:1fr}.topbar .pill{display:none}}
 </style>
 </head>
 <body>
@@ -31,7 +31,7 @@
 
 <section class="hero" id="top">
 <h2>Tell us what you buy. We’ll find the savings paths.</h2>
-<p>Step 9 turns the Command Center into a cleaner consumer dashboard: search first, savings summary, best matches, source health, wallet, and shopping-list tools in one place.</p>
+<p>Step 10 adds a Deal Plan: organize matched savings by store, show the strongest offer for each shopping-list item, and give shoppers a simple trip-ready checklist.</p>
 <div class="search" id="searchSection"><input id="quickSearch" placeholder="Quick search: Tide, pizza, allergy..."><button id="quickBtn">Search</button></div>
 </section>
 
@@ -50,6 +50,7 @@
       <button class="quick-action" id="qaSearch"><b>🔎 Search coupons</b><span>Jump to a product search</span></button>
       <button class="quick-action" id="qaList"><b>🛒 Match my list</b><span>Find savings across several items</span></button>
       <button class="quick-action" id="qaWallet"><b>💳 Open wallet</b><span>See the offers you saved</span></button>
+      <button class="quick-action" id="qaPlan"><b>✓ Deal plan</b><span>Build a trip-ready savings checklist</span></button>
     </div>
   </div>
   <div class="insight-panel">
@@ -121,7 +122,7 @@
 <div class="toast" id="toast"></div>
 
 <script>
-let OFFERS=[],RAW_OFFERS=[],STORES=[],SOURCE_HEALTH={},LIVE_META={},activeSmart="all",activeSources=new Set(),wallet=JSON.parse(localStorage.getItem("ccc-wallet-v4")||"[]");
+let OFFERS=[],RAW_OFFERS=[],STORES=[],SOURCE_HEALTH={},LIVE_META={},LAST_MATCHES=[],activeSmart="all",activeSources=new Set(),wallet=JSON.parse(localStorage.getItem("ccc-wallet-v4")||"[]");
 let prefs=JSON.parse(localStorage.getItem("ccc-prefs-v4")||'{"zip":"","stores":[]}');
 const results=document.getElementById("results"),toast=document.getElementById("toast");
 
@@ -316,6 +317,7 @@ function matchList(){
   const covered=new Set(uniq.map(x=>x.matchedItem));
   const totalPotential=uniq.reduce((s,o)=>s+numericSavings(o.value),0);
   document.getElementById("summary").textContent=`Matched ${covered.size} of ${list.length} shopping-list items to ${uniq.length} offer path${uniq.length===1?"":"s"}. Indexed savings value: $${totalPotential.toFixed(2)} before retailer pricing.`;
+  LAST_MATCHES=uniq;
   showBestDeal(uniq);
   updateSnapshot(uniq.length);
   renderOffers(uniq,list);
@@ -375,9 +377,50 @@ document.getElementById("wmCheck").onclick=checkWalmart;
 document.getElementById("qaSearch").onclick=()=>scrollToId("searchSection");
 document.getElementById("qaList").onclick=()=>scrollToId("shoppingListSection");
 document.getElementById("qaWallet").onclick=()=>document.getElementById("walletTop").click();
+document.getElementById("qaPlan").onclick=()=>scrollToId("dealPlanSection");
 document.getElementById("navHome").onclick=()=>scrollToId("top");
 document.getElementById("navSearch").onclick=()=>scrollToId("searchSection");
 document.getElementById("navList").onclick=()=>scrollToId("shoppingListSection");
+
+
+function bestOfferPerItem(){
+  const items=document.getElementById("shoppingList").value.split(/\n|,/).map(x=>x.trim()).filter(Boolean);
+  return items.map(item=>{
+    const ranked=applySmartFilters(OFFERS).map(o=>({o,score:scoreOffer(o,item)}))
+      .filter(x=>x.score>0).sort((a,b)=>b.score-a.score);
+    return {item,best:ranked[0]||null};
+  });
+}
+function buildDealPlan(){
+  const rows=bestOfferPerItem();
+  const box=document.getElementById("dealPlan");
+  if(!rows.length){box.innerHTML='<div class="empty">Add items to your shopping list first.</div>';return}
+  const groups={};
+  for(const row of rows){
+    const o=row.best?.o;
+    const store=o?.store && !/any|see source/i.test(o.store) ? o.store : "Best available savings";
+    (groups[store] ||= []).push(row);
+  }
+  box.innerHTML=Object.entries(groups).map(([store,rows])=>`
+    <div class="trip-store"><h4>${store}</h4>
+      ${rows.map((r,i)=>{
+        const o=r.best?.o;
+        return `<div class="trip-item"><div class="checkline"><input type="checkbox" class="trip-check" data-key="${store}-${i}"><div><strong>${r.item}</strong><small>${o?`${o.source} · ${o.title}`:"No matching indexed offer yet"}</small></div></div><strong>${o?o.value:"—"}</strong></div>`
+      }).join("")}
+    </div>`).join("");
+  restoreTripChecks();
+  document.querySelectorAll(".trip-check").forEach(c=>c.onchange=saveTripChecks);
+}
+function saveTripChecks(){
+  const state={};document.querySelectorAll(".trip-check").forEach(c=>state[c.dataset.key]=c.checked);
+  localStorage.setItem("ccc-trip-checks",JSON.stringify(state));
+}
+function restoreTripChecks(){
+  const state=JSON.parse(localStorage.getItem("ccc-trip-checks")||"{}");
+  document.querySelectorAll(".trip-check").forEach(c=>c.checked=!!state[c.dataset.key]);
+}
+document.getElementById("buildPlan").onclick=buildDealPlan;
+document.getElementById("clearPlan").onclick=()=>{localStorage.removeItem("ccc-trip-checks");document.querySelectorAll(".trip-check").forEach(c=>c.checked=false)};
 
 load();
 </script>

@@ -1,22 +1,12 @@
-# Coupon Command Center — Step 9
+# Coupon Command Center — Step 10
 
-Step 9 upgrades the app into a cleaner consumer dashboard.
+Step 10 adds the Deal Plan.
 
 ## New
-- Start Here dashboard
-- Savings Snapshot
-- Search / list / wallet quick actions
-- Cleaner section names
-- Better mobile navigation
-- Source health, filters, shopping list and wallet presented as one coherent consumer flow
-- `repo-cleanup.json` listing safe old duplicates to remove
+- Best offer per shopping-list item
+- Store-by-store deal plan
+- Trip-ready checklist
+- Checklist state saved in the browser
+- Quick action from the dashboard
 
-## Preserved
-- Step 8 broader source ingestion
-- Twice-daily GitHub Action
-- ZIP and preferred stores
-- Shopping-list matching
-- Best Savings Path
-- Wallet
-- Walmart verification/link-out
-- Provider-controlled redemption safeguards
+The plan never invents a coupon or barcode. It points back to indexed savings paths and their original providers.
