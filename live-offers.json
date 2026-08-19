@@ -1,0 +1,125 @@
+{
+  "generatedAt": "2026-08-18T19:46:00-05:00",
+  "status": "seed",
+  "sourceSummary": {
+    "grocerysmarts": {
+      "status": "active",
+      "count": 47,
+      "note": "Public directory reports 47 active manufacturer coupons."
+    },
+    "lozo": {
+      "status": "active",
+      "count": 2592,
+      "note": "Public page reports 2,592 printable grocery coupons + more."
+    },
+    "couponscom": {
+      "status": "link-only",
+      "note": "Printable flow remains on Coupons.com due to verification/print controls."
+    },
+    "fetch": {
+      "status": "personalized-link-only",
+      "note": "Fetch offers vary by account and stay inside Fetch."
+    }
+  },
+  "offers": [
+    {
+      "id": "gs-astepro-5",
+      "brand": "Astepro",
+      "title": "Astepro Allergy 60 sprays or larger",
+      "value": "$5/1",
+      "source": "GrocerySmarts",
+      "type": "Printable",
+      "expires": "See source",
+      "url": "https://www.grocerysmarts.com/",
+      "terms": "Open source for current eligibility and print flow."
+    },
+    {
+      "id": "gs-astepro-8",
+      "brand": "Astepro",
+      "title": "Astepro Allergy 120 sprays or larger",
+      "value": "$8/1",
+      "source": "GrocerySmarts",
+      "type": "Printable",
+      "expires": "See source",
+      "url": "https://www.grocerysmarts.com/",
+      "terms": "Open source for current eligibility and print flow."
+    },
+    {
+      "id": "gs-benadryl-2",
+      "brand": "Benadryl",
+      "title": "BENADRYL product, excludes trial/travel sizes",
+      "value": "$2/1",
+      "source": "GrocerySmarts",
+      "type": "Printable",
+      "expires": "See source",
+      "url": "https://www.grocerysmarts.com/",
+      "terms": "Open source for current eligibility and print flow."
+    },
+    {
+      "id": "gs-boost-6",
+      "brand": "BOOST",
+      "title": "BOOST Nutritional Drinks 4-pack or larger",
+      "value": "$6/2",
+      "source": "GrocerySmarts",
+      "type": "Printable",
+      "expires": "See source",
+      "url": "https://www.grocerysmarts.com/",
+      "terms": "Must buy 2. Open source for current terms."
+    },
+    {
+      "id": "gs-busy-1",
+      "brand": "Busy",
+      "title": "Busy Dog Treats 5\u201325 oz bag",
+      "value": "$1/1",
+      "source": "GrocerySmarts",
+      "type": "Printable",
+      "expires": "See source",
+      "url": "https://www.grocerysmarts.com/",
+      "terms": "Open source for current eligibility and print flow."
+    },
+    {
+      "id": "gs-zyrtec-5",
+      "brand": "Zyrtec",
+      "title": "ZYRTEC Adult Allergy 24\u201360 ct",
+      "value": "$5/1",
+      "source": "GrocerySmarts",
+      "type": "Printable",
+      "expires": "See source",
+      "url": "https://www.grocerysmarts.com/",
+      "terms": "Excludes trial/travel sizes. Open source for current terms."
+    },
+    {
+      "id": "gs-zyrtec-10",
+      "brand": "Zyrtec",
+      "title": "ZYRTEC Adult Allergy 90 ct",
+      "value": "$10/1",
+      "source": "GrocerySmarts",
+      "type": "Printable",
+      "expires": "See source",
+      "url": "https://www.grocerysmarts.com/",
+      "terms": "Excludes trial/travel sizes. Open source for current terms."
+    },
+    {
+      "id": "gs-zyrtec-child-4",
+      "brand": "Zyrtec",
+      "title": "ZYRTEC Children's Allergy product",
+      "value": "$4/1",
+      "source": "GrocerySmarts",
+      "type": "Printable",
+      "expires": "See source",
+      "url": "https://www.grocerysmarts.com/",
+      "terms": "Excludes trial/travel sizes. Open source for current terms."
+    },
+    {
+      "id": "lozo-pg-15",
+      "brand": "P&G",
+      "title": "P&G brandSAVER offer",
+      "value": "Up to $15 back",
+      "source": "LOZO",
+      "type": "Cashback",
+      "expires": "See source",
+      "url": "https://lozo.com/",
+      "terms": "Open LOZO / manufacturer destination for current qualifying purchase requirements."
+    }
+  ]
+}
