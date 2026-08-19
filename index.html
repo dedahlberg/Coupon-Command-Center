@@ -10,7 +10,7 @@
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,textarea{font:inherit}
 .shell{max-width:1180px;margin:auto;min-height:100vh;padding:24px 20px 92px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}.brand{display:flex;gap:12px;align-items:center}.logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#635bff,#9b8cff);display:grid;place-items:center;color:#fff;font-weight:900;font-size:20px;box-shadow:var(--shadow)}.brand h1{font-size:22px;line-height:1.1;margin:0}.brand p{margin:4px 0 0;color:var(--muted);font-size:13px}.pill{border:1px solid var(--line);background:white;border-radius:999px;padding:10px 14px;color:var(--ink);font-weight:700}
 .hero{background:linear-gradient(135deg,#151a2d 0%,#253054 55%,#584bc4 100%);border-radius:30px;padding:28px;color:#fff;box-shadow:var(--shadow)}.hero h2{font-size:34px;line-height:1.05;margin:0 0 10px}.hero p{color:#d9dcf7;margin:0 0 18px;max-width:800px}.search{display:flex;background:white;border-radius:17px;padding:6px;gap:6px;max-width:760px}.search input{flex:1;min-width:0;border:0;outline:0;padding:14px;font-size:16px;background:transparent}.search button{border:0;border-radius:12px;background:var(--accent);color:white;font-weight:800;padding:0 18px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0 26px}.stat{background:white;border:1px solid var(--line);border-radius:18px;padding:18px}.stat strong{display:block;font-size:26px}.stat span{color:var(--muted);font-size:13px}
+.dashboard-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:16px;margin:18px 0}.quick-panel,.insight-panel{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px}.quick-panel h3,.insight-panel h3{margin:0 0 6px}.quick-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.quick-action{border:1px solid var(--line);background:#fff;border-radius:14px;padding:14px;text-align:left;cursor:pointer}.quick-action b{display:block;font-size:14px;margin-bottom:4px}.quick-action span{font-size:12px;color:var(--muted)}.insight-list{display:grid;gap:10px;margin-top:12px}.insight{border:1px solid var(--line);border-radius:14px;padding:12px}.insight strong{display:block;font-size:14px}.insight span{font-size:12px;color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0 26px}.stat{background:white;border:1px solid var(--line);border-radius:18px;padding:18px}.stat strong{display:block;font-size:26px}.stat span{color:var(--muted);font-size:13px}
 .section{background:white;border:1px solid var(--line);border-radius:22px;padding:18px;margin:16px 0}.section h3{margin:0 0 5px;font-size:19px}.section p{margin:0 0 14px;color:var(--muted);font-size:13px;line-height:1.45}
 .setup-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:16px}.field label{display:block;font-size:12px;font-weight:800;color:#475467;margin-bottom:7px}.field input,.field textarea{width:100%;border:1px solid #d0d5dd;border-radius:12px;padding:12px;background:white;outline:0}.field input:focus,.field textarea:focus{border-color:#8d86ff;box-shadow:0 0 0 3px rgba(99,91,255,.12)}
 .source-filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.source-filter{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 11px;font-size:12px;font-weight:800;color:#475467;cursor:pointer}.source-filter.on{background:#101828;color:#fff;border-color:#101828}.source-filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.store-list{display:flex;flex-wrap:wrap;gap:8px}.store{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 12px;font-weight:750;color:#344054;cursor:pointer}.store.on{background:#101828;color:#fff;border-color:#101828}
@@ -22,17 +22,17 @@
 .best-banner{background:linear-gradient(135deg,#ecfdf3,#f8fffb);border:1px solid #abefc6;border-radius:16px;padding:14px 16px;margin:14px 0}.best-banner strong{display:block;font-size:16px}.best-banner span{color:#067647;font-size:13px}.score{font-size:11px;font-weight:800;border-radius:999px;padding:6px 8px;background:#eef4ff;color:#3538cd}.result-summary{background:#f8f9fc;border:1px solid var(--line);border-radius:14px;padding:13px 15px;margin:14px 0 0;color:#475467;font-size:13px}.empty{grid-column:1/-1;background:white;border:1px dashed #cfd4dc;border-radius:18px;padding:28px;text-align:center;color:var(--muted)}
 .bottom{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.93);backdrop-filter:blur(18px);border-top:1px solid var(--line);padding:10px 16px;z-index:10}.nav{max-width:650px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr)}.nav button{border:0;background:transparent;padding:8px;color:#667085;font-size:11px;font-weight:750}.nav button b{display:block;font-size:20px}.nav .active{color:var(--accent)}
 .toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);background:#101828;color:white;padding:12px 16px;border-radius:999px;font-weight:800;font-size:13px;opacity:0;transition:.2s;z-index:20}.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.setup-grid{grid-template-columns:1fr}}@media(max-width:560px){.shell{padding:16px 14px 90px}.hero{padding:22px 18px;border-radius:24px}.hero h2{font-size:28px}.grid{grid-template-columns:1fr}.topbar .pill{display:none}}
+@media(max-width:850px){.dashboard-grid{grid-template-columns:1fr}.quick-actions{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.setup-grid{grid-template-columns:1fr}}@media(max-width:560px){.shell{padding:16px 14px 90px}.hero{padding:22px 18px;border-radius:24px}.hero h2{font-size:28px}.grid{grid-template-columns:1fr}.topbar .pill{display:none}}
 </style>
 </head>
 <body>
 <main class="shell">
 <div class="topbar"><div class="brand"><div class="logo">CC</div><div><h1>Coupon Command Center</h1><p>Personal savings engine</p></div></div><button class="pill" id="walletTop">💳 Wallet <span id="walletCount">0</span></button></div>
 
-<section class="hero">
+<section class="hero" id="top">
 <h2>Tell us what you buy. We’ll find the savings paths.</h2>
-<p>Step 8 broadens the live savings index across multiple public sources while keeping provider-controlled coupons, personalized rewards, and redemption flows with the original issuer.</p>
-<div class="search"><input id="quickSearch" placeholder="Quick search: Tide, pizza, allergy..."><button id="quickBtn">Search</button></div>
+<p>Step 9 turns the Command Center into a cleaner consumer dashboard: search first, savings summary, best matches, source health, wallet, and shopping-list tools in one place.</p>
+<div class="search" id="searchSection"><input id="quickSearch" placeholder="Quick search: Tide, pizza, allergy..."><button id="quickBtn">Search</button></div>
 </section>
 
 <section class="stats">
@@ -42,8 +42,28 @@
 <div class="stat"><strong id="walletCount2">0</strong><span>Saved offers</span></div>
 </section>
 
+<section class="dashboard-grid">
+  <div class="quick-panel">
+    <h3>Start Here</h3>
+    <p class="muted">Use the fastest path for what you want to do right now.</p>
+    <div class="quick-actions">
+      <button class="quick-action" id="qaSearch"><b>🔎 Search coupons</b><span>Jump to a product search</span></button>
+      <button class="quick-action" id="qaList"><b>🛒 Match my list</b><span>Find savings across several items</span></button>
+      <button class="quick-action" id="qaWallet"><b>💳 Open wallet</b><span>See the offers you saved</span></button>
+    </div>
+  </div>
+  <div class="insight-panel">
+    <h3>Savings Snapshot</h3>
+    <div class="insight-list">
+      <div class="insight"><strong id="snapshotSources">0 sources</strong><span>Live source layers checked</span></div>
+      <div class="insight"><strong id="snapshotMatches">0 matches</strong><span>Current shopping-list matches</span></div>
+      <div class="insight"><strong id="snapshotWallet">0 saved</strong><span>Offers in your wallet</span></div>
+    </div>
+  </div>
+</section>
+
 <section class="section">
-<h3>1. Set your shopping area</h3>
+<h3>Your Shopping Area</h3>
 <p>Your ZIP code and store choices are saved only in your browser in this prototype.</p>
 <div class="setup-grid">
 <div class="field"><label>ZIP CODE</label><input id="zip" inputmode="numeric" maxlength="10" placeholder="75034"></div>
@@ -56,13 +76,13 @@
 
 
 <section class="section">
-<h3>Live Source Coverage</h3>
+<h3>Source Health</h3>
 <p id="coverageText">Loading source coverage…</p>
 <div class="source-filters" id="coverageBadges"></div>
 </section>
 
 <section class="section">
-<h3>Smart Savings Filters</h3>
+<h3>Filter Savings</h3>
 <p>Filter the live index without losing your ZIP, store or shopping-list preferences.</p>
 <div class="source-filters" id="smartFilters">
   <button class="source-filter on" data-smart="all">All Offers</button>
@@ -85,8 +105,8 @@
 <div class="actions-row"><button class="primary" id="wmCheck">Check Walmart</button></div>
 </section>
 
-<section class="section">
-<h3>2. Build your shopping list</h3>
+<section class="section" id="shoppingListSection">
+<h3>Your Shopping List</h3>
 <p>Enter one item per line or separate items with commas. Brand names work best.</p>
 <div class="field"><label>SHOPPING LIST</label><textarea id="shoppingList" rows="5" placeholder="Tide&#10;Red Baron pizza&#10;Dove body wash&#10;Bibigo dumplings"></textarea></div>
 <div class="actions-row"><button class="primary" id="matchBtn">Find my savings</button><button class="secondary" id="sampleBtn">Load sample list</button></div>
@@ -97,7 +117,7 @@
 <section class="grid" id="results"></section>
 </main>
 
-<div class="bottom"><div class="nav"><button class="active"><b>⌂</b>Discover</button><button><b>⌕</b>Search</button><button id="walletNav"><b>▣</b>Wallet</button><button><b>☷</b>List</button></div></div>
+<div class="bottom"><div class="nav"><button class="active" id="navHome"><b>⌂</b>Home</button><button id="navSearch"><b>⌕</b>Search</button><button id="walletNav"><b>▣</b>Wallet</button><button id="navList"><b>☷</b>List</button></div></div>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -121,7 +141,7 @@ async function load(){
     firstSeen:o.firstSeen||o.createdAt||null, refreshedAt:live.generatedAt||null
   }));
   OFFERS=dedupeOffers(RAW_OFFERS);
-  renderStores();renderSourceFilters();renderCoverage();applyPrefs();renderStats();renderOffers(applySmartFilters(OFFERS).slice(0,12),[]);
+  renderStores();renderSourceFilters();renderCoverage();applyPrefs();renderStats();renderOffers(applySmartFilters(OFFERS).slice(0,12),[]);updateSnapshot(0);
 }
 
 function canonicalOfferKey(o){
@@ -188,6 +208,19 @@ function renderSourceFilters(){
   });
 }
 
+
+
+function updateSnapshot(matchCount=0){
+  const sourceCount=Object.keys((LIVE_META&&LIVE_META.sourceSummary)||{}).length;
+  const a=document.getElementById("snapshotSources"),b=document.getElementById("snapshotMatches"),c=document.getElementById("snapshotWallet");
+  if(a)a.textContent=`${sourceCount} source${sourceCount===1?"":"s"}`;
+  if(b)b.textContent=`${matchCount} match${matchCount===1?"":"es"}`;
+  if(c)c.textContent=`${wallet.length} saved`;
+}
+function scrollToId(id){
+  const el=document.getElementById(id);
+  if(el)el.scrollIntoView({behavior:"smooth",block:"start"});
+}
 
 function renderCoverage(){
   const meta=LIVE_META.sourceSummary||{};
@@ -284,6 +317,7 @@ function matchList(){
   const totalPotential=uniq.reduce((s,o)=>s+numericSavings(o.value),0);
   document.getElementById("summary").textContent=`Matched ${covered.size} of ${list.length} shopping-list items to ${uniq.length} offer path${uniq.length===1?"":"s"}. Indexed savings value: $${totalPotential.toFixed(2)} before retailer pricing.`;
   showBestDeal(uniq);
+  updateSnapshot(uniq.length);
   renderOffers(uniq,list);
 }
 function renderOffers(arr,list){
@@ -297,7 +331,7 @@ function renderOffers(arr,list){
     <div class="card-actions"><button class="save" onclick="toggleWallet('${o.id.replace(/'/g,"")}')">${wallet.includes(o.id)?"✓ Saved":"+ Wallet"}</button><a class="open" href="${o.url}" target="_blank" rel="noopener">Open source ↗</a></div>
   </article>`).join("");
 }
-window.toggleWallet=id=>{wallet=wallet.includes(id)?wallet.filter(x=>x!==id):[...wallet,id];localStorage.setItem("ccc-wallet-v4",JSON.stringify(wallet));renderStats();say(wallet.includes(id)?"Saved to wallet":"Removed")};
+window.toggleWallet=id=>{wallet=wallet.includes(id)?wallet.filter(x=>x!==id):[...wallet,id];localStorage.setItem("ccc-wallet-v4",JSON.stringify(wallet));renderStats();updateSnapshot();say(wallet.includes(id)?"Saved to wallet":"Removed")};
 function renderStats(){document.getElementById("offerCount").textContent=applySmartFilters(OFFERS).length;document.getElementById("storeCount").textContent=selectedStores().length;document.getElementById("listCount").textContent=parseList().length;document.getElementById("walletCount").textContent=wallet.length;document.getElementById("walletCount2").textContent=wallet.length}
 document.getElementById("savePrefs").onclick=()=>{prefs={zip:document.getElementById("zip").value.trim(),stores:selectedStores()};localStorage.setItem("ccc-prefs-v4",JSON.stringify(prefs));say("Preferences saved")};
 document.getElementById("clearPrefs").onclick=()=>{prefs={zip:"",stores:[]};localStorage.removeItem("ccc-prefs-v4");applyPrefs();renderStats();say("Preferences cleared")};
@@ -336,6 +370,14 @@ async function checkWalmart(){
   }
 }
 document.getElementById("wmCheck").onclick=checkWalmart;
+
+
+document.getElementById("qaSearch").onclick=()=>scrollToId("searchSection");
+document.getElementById("qaList").onclick=()=>scrollToId("shoppingListSection");
+document.getElementById("qaWallet").onclick=()=>document.getElementById("walletTop").click();
+document.getElementById("navHome").onclick=()=>scrollToId("top");
+document.getElementById("navSearch").onclick=()=>scrollToId("searchSection");
+document.getElementById("navList").onclick=()=>scrollToId("shoppingListSection");
 
 load();
 </script>

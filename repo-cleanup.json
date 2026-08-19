@@ -1,0 +1,23 @@
+{
+  "safeToDeleteFromRepo": [
+    "index (1).html",
+    "index(1).html",
+    "Coupon-Command-Center-Step3 (1).zip",
+    "Coupon-Command-Center-Step3 (2).zip",
+    "github__workflows__refresh-offers.yml"
+  ],
+  "keep": [
+    "index.html",
+    "live-offers.json",
+    "offers.json",
+    "sources.json",
+    "stores.json",
+    "source-health.json",
+    "source-registry.json",
+    "deal-engine.json",
+    "pricing-sources.json",
+    "scripts/refresh-offers.cjs",
+    ".github/workflows/refresh-offers.yml",
+    "api/walmart-price.js"
+  ]
+}

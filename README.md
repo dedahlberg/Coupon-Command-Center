@@ -1,17 +1,22 @@
-# Coupon Command Center — Step 8
+# Coupon Command Center — Step 9
 
-Step 8 broadens live source ingestion while preserving authorized redemption.
+Step 9 upgrades the app into a cleaner consumer dashboard.
 
-## Broader source layer
-- GrocerySmarts: public individual coupon metadata
-- Krazy Coupon Lady: recent public deal-discovery headlines
-- LOZO: directory health/count + link-out
-- Coupons.com: live page health + provider-controlled printable flow
-- Fetch: personalized link-out
-- Manufacturer Direct: curated official-program layer
+## New
+- Start Here dashboard
+- Savings Snapshot
+- Search / list / wallet quick actions
+- Cleaner section names
+- Better mobile navigation
+- Source health, filters, shopping list and wallet presented as one coherent consumer flow
+- `repo-cleanup.json` listing safe old duplicates to remove
 
-## Automation
-The GitHub Action now refreshes twice daily.
-
-## Guardrails
-The app does not copy/generate barcodes or QR codes, bypass phone verification or print limits, or present personalized Fetch offers as universal offers.
+## Preserved
+- Step 8 broader source ingestion
+- Twice-daily GitHub Action
+- ZIP and preferred stores
+- Shopping-list matching
+- Best Savings Path
+- Wallet
+- Walmart verification/link-out
+- Provider-controlled redemption safeguards
