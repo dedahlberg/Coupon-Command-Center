@@ -31,7 +31,7 @@
 
 <section class="hero">
 <h2>Tell us what you buy. We’ll find the savings paths.</h2>
-<p>Step 7 strengthens the savings engine: better source filtering, duplicate removal, New Today, Expiring Soon, stronger shopping-list matching, and a cleaner Best Savings Path.</p>
+<p>Step 8 broadens the live savings index across multiple public sources while keeping provider-controlled coupons, personalized rewards, and redemption flows with the original issuer.</p>
 <div class="search"><input id="quickSearch" placeholder="Quick search: Tide, pizza, allergy..."><button id="quickBtn">Search</button></div>
 </section>
 
@@ -53,6 +53,13 @@
 </section>
 
 
+
+
+<section class="section">
+<h3>Live Source Coverage</h3>
+<p id="coverageText">Loading source coverage…</p>
+<div class="source-filters" id="coverageBadges"></div>
+</section>
 
 <section class="section">
 <h3>Smart Savings Filters</h3>
@@ -94,7 +101,7 @@
 <div class="toast" id="toast"></div>
 
 <script>
-let OFFERS=[],RAW_OFFERS=[],STORES=[],SOURCE_HEALTH={},activeSmart="all",activeSources=new Set(),wallet=JSON.parse(localStorage.getItem("ccc-wallet-v4")||"[]");
+let OFFERS=[],RAW_OFFERS=[],STORES=[],SOURCE_HEALTH={},LIVE_META={},activeSmart="all",activeSources=new Set(),wallet=JSON.parse(localStorage.getItem("ccc-wallet-v4")||"[]");
 let prefs=JSON.parse(localStorage.getItem("ccc-prefs-v4")||'{"zip":"","stores":[]}');
 const results=document.getElementById("results"),toast=document.getElementById("toast");
 
@@ -105,7 +112,7 @@ function say(m){toast.textContent=m;toast.classList.add("show");setTimeout(()=>t
 async function load(){
   STORES=await (await fetch("./stores.json",{cache:"no-store"})).json();
   try{SOURCE_HEALTH=await (await fetch("./source-health.json",{cache:"no-store"})).json()}catch(e){SOURCE_HEALTH={sources:{}}}
-  let live={offers:[]}; try{live=await (await fetch("./live-offers.json?t="+Date.now(),{cache:"no-store"})).json()}catch(e){}
+  let live={offers:[]}; try{live=await (await fetch("./live-offers.json?t="+Date.now(),{cache:"no-store"})).json();LIVE_META=live}catch(e){LIVE_META={}}
   let fallback=[]; try{fallback=await (await fetch("./offers.json",{cache:"no-store"})).json()}catch(e){}
   RAW_OFFERS=(live.offers&&live.offers.length?live.offers:fallback).map((o,i)=>({
     id:o.id||("offer-"+i), brand:o.brand||"", title:o.title||"", desc:o.terms||o.desc||"",
@@ -114,7 +121,7 @@ async function load(){
     firstSeen:o.firstSeen||o.createdAt||null, refreshedAt:live.generatedAt||null
   }));
   OFFERS=dedupeOffers(RAW_OFFERS);
-  renderStores();renderSourceFilters();applyPrefs();renderStats();renderOffers(applySmartFilters(OFFERS).slice(0,9),[]);
+  renderStores();renderSourceFilters();renderCoverage();applyPrefs();renderStats();renderOffers(applySmartFilters(OFFERS).slice(0,12),[]);
 }
 
 function canonicalOfferKey(o){
@@ -179,6 +186,23 @@ function renderSourceFilters(){
     renderOffers(applySmartFilters(OFFERS).slice(0,30),[]);
     renderStats();
   });
+}
+
+
+function renderCoverage(){
+  const meta=LIVE_META.sourceSummary||{};
+  const names={
+    grocerysmarts:"GrocerySmarts",kcl:"KCL",lozo:"LOZO",
+    couponscom:"Coupons.com",fetch:"Fetch",manufacturer:"Manufacturer"
+  };
+  const entries=Object.entries(meta);
+  const active=entries.filter(([k,v])=>String(v.status||"").includes("active")||String(v.status||"").includes("link")||String(v.status||"").includes("curated"));
+  document.getElementById("coverageText").textContent=`${active.length} source adapters/status layers checked in the latest refresh. Individual offer ingestion is used only where public metadata is suitable; provider-controlled redemption stays with the issuer.`;
+  document.getElementById("coverageBadges").innerHTML=entries.map(([k,v])=>{
+    const status=v.status||"unknown";
+    const count=(v.count!==undefined&&v.count!==null)?` · ${v.count}`:"";
+    return `<span class="source-filter ${status==="active"?"on":""}" style="cursor:default">${names[k]||k}: ${status}${count}</span>`;
+  }).join("");
 }
 
 function renderStores(){

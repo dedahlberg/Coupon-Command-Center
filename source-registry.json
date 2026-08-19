@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "updatedAt": "2026-08-19T01:58:11.961145+00:00",
+  "sources": [
+    {
+      "id": "grocerysmarts",
+      "name": "GrocerySmarts",
+      "mode": "public-index",
+      "ingestion": "individual-offers",
+      "redemption": "source-link",
+      "notes": "Public coupon directory; individual public listings can be normalized."
+    },
+    {
+      "id": "kcl",
+      "name": "Krazy Coupon Lady",
+      "mode": "public-deal-index",
+      "ingestion": "recent-deal-headlines",
+      "redemption": "source-link",
+      "notes": "Recent public deal headlines are indexed as deal-discovery cards."
+    },
+    {
+      "id": "lozo",
+      "name": "LOZO",
+      "mode": "public-index",
+      "ingestion": "health-and-count",
+      "redemption": "source-link",
+      "notes": "Directory health/count indexed; individual redemption remains with LOZO/originating providers."
+    },
+    {
+      "id": "couponscom",
+      "name": "Coupons.com",
+      "mode": "provider-controlled",
+      "ingestion": "health-only",
+      "redemption": "provider-controlled",
+      "notes": "Printable coupons require the provider's clip/phone-verification/print flow; this app does not reproduce those controls."
+    },
+    {
+      "id": "fetch",
+      "name": "Fetch",
+      "mode": "personalized",
+      "ingestion": "link-only",
+      "redemption": "provider-controlled",
+      "notes": "Offers are account-personalized and remain inside Fetch."
+    },
+    {
+      "id": "manufacturer",
+      "name": "Manufacturer Direct",
+      "mode": "brand-programs",
+      "ingestion": "curated-links",
+      "redemption": "source-link",
+      "notes": "Official manufacturer programs can be added as verified source links."
+    }
+  ]
+}

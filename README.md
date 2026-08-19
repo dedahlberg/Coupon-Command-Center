@@ -1,14 +1,17 @@
-# Coupon Command Center — Step 5
+# Coupon Command Center — Step 8
 
-Adds the Best Deal Engine on top of Step 4.
+Step 8 broadens live source ingestion while preserving authorized redemption.
 
-## New
-- Best Savings Path banner
-- Savings-value ranking
-- Store relevance ranking
-- Match-confidence labels
-- Indexed basket savings total
-- Pricing-ready data model in `deal-engine.json`
+## Broader source layer
+- GrocerySmarts: public individual coupon metadata
+- Krazy Coupon Lady: recent public deal-discovery headlines
+- LOZO: directory health/count + link-out
+- Coupons.com: live page health + provider-controlled printable flow
+- Fetch: personalized link-out
+- Manufacturer Direct: curated official-program layer
 
-## Important
-The app does not invent retailer shelf prices. Final price and true basket total are reserved for verified retailer pricing integrations.
+## Automation
+The GitHub Action now refreshes twice daily.
+
+## Guardrails
+The app does not copy/generate barcodes or QR codes, bypass phone verification or print limits, or present personalized Fetch offers as universal offers.
