@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-08-20T23:59:41.833Z",
+  "generatedAt": "2026-08-21T12:04:46.564Z",
   "status": "automated-step8",
   "sourceSummary": {
     "grocerysmarts": {
       "status": "active",
       "count": 47,
-      "refreshedAt": "2026-08-20T23:59:39.101Z"
+      "refreshedAt": "2026-08-21T12:04:43.695Z"
     },
     "kcl": {
       "status": "active",
       "count": 0,
-      "refreshedAt": "2026-08-20T23:59:39.238Z"
+      "refreshedAt": "2026-08-21T12:04:44.441Z"
     },
     "lozo": {
       "status": "active",
-      "count": 2593,
-      "refreshedAt": "2026-08-20T23:59:41.673Z",
+      "count": 2594,
+      "refreshedAt": "2026-08-21T12:04:46.410Z",
       "note": "Directory indexed; individual redemption stays with LOZO/originating providers."
     },
     "couponscom": {
       "status": "active",
-      "refreshedAt": "2026-08-20T23:59:41.833Z",
+      "refreshedAt": "2026-08-21T12:04:46.563Z",
       "note": "Provider page reachable. Printable coupon selection/phone verification/printing remains on Coupons.com."
     },
     "fetch": {
@@ -43,7 +43,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -56,7 +56,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -69,7 +69,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -82,7 +82,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -95,7 +95,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -108,7 +108,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -121,7 +121,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -134,7 +134,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -147,7 +147,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -160,7 +160,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -173,7 +173,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -186,7 +186,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -199,7 +199,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -212,7 +212,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -225,7 +225,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -238,7 +238,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -251,7 +251,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -264,7 +264,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -277,7 +277,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -290,7 +290,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -303,7 +303,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -316,7 +316,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -329,7 +329,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -342,7 +342,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -355,7 +355,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -368,7 +368,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -381,7 +381,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -394,7 +394,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -407,7 +407,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -420,7 +420,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -433,7 +433,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -446,7 +446,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -459,7 +459,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -472,7 +472,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -485,7 +485,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -498,7 +498,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -511,7 +511,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -524,7 +524,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -537,7 +537,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -550,7 +550,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -563,7 +563,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -576,7 +576,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -589,7 +589,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     },
     {
@@ -602,7 +602,7 @@
       "store": "See source",
       "expires": "See source",
       "url": "https://www.grocerysmarts.com/",
-      "firstSeen": "2026-08-20T23:59:39.100Z",
+      "firstSeen": "2026-08-21T12:04:43.694Z",
       "terms": "Open GrocerySmarts/originating provider for current eligibility, expiration and authorized print flow."
     }
   ]
