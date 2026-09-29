@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-09-28T18:37:23.257Z",
+  "generatedAt": "2026-09-29T02:35:02.943Z",
   "status": "automated-step8",
   "sourceSummary": {
     "grocerysmarts": {
-      "status": "active",
-      "count": 47,
-      "refreshedAt": "2026-09-28T18:37:20.636Z"
+      "status": "error",
+      "error": "TypeError: fetch failed",
+      "refreshedAt": "2026-09-29T02:34:59.634Z"
     },
     "kcl": {
       "status": "active",
       "count": 0,
-      "refreshedAt": "2026-09-28T18:37:20.807Z"
+      "refreshedAt": "2026-09-29T02:35:00.440Z"
     },
     "lozo": {
       "status": "active",
       "count": 2585,
-      "refreshedAt": "2026-09-28T18:37:23.112Z",
+      "refreshedAt": "2026-09-29T02:35:02.599Z",
       "note": "Directory indexed; individual redemption stays with LOZO/originating providers."
     },
     "couponscom": {
       "status": "active",
-      "refreshedAt": "2026-09-28T18:37:23.256Z",
+      "refreshedAt": "2026-09-29T02:35:02.943Z",
       "note": "Provider page reachable. Printable coupon selection/phone verification/printing remains on Coupons.com."
     },
     "fetch": {
